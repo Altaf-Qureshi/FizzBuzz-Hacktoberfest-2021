@@ -1,0 +1,23 @@
+// Write a function to print first N terms of Fibonacci series.
+#include<iostream>
+using namespace std;
+int fibonacci(int x, int y, int z);
+int main()
+{
+    int a=0, b=1, n, sum;
+    cout << "enter number: ";
+    cin >> n;
+    cout << a << "\t" << b << "\t";
+    sum = fibonacci(a, b, n);
+}
+int fibonacci(int x, int y, int z)
+{   
+    int sum = 0;
+    for(int i=2; i<z; i++)  {
+        sum = x + y;
+        cout << sum << "\t";
+        x = y;      //1 1 2 3
+        y = sum;    //1 2 3 5
+    }
+    return 0;
+}
